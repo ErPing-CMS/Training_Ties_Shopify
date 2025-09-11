@@ -1,0 +1,566 @@
+<!-- Training Ties Hub Page - Shopify Compatible -->
+<style>
+        .training-ties-hub {
+            font-family: inherit;
+            color: #2d3436;
+            line-height: 1.7;
+        }
+
+        .training-ties-hub * {
+            box-sizing: border-box;
+        }
+
+        /* Hero Section with Bobby's Story */
+        .tt-hero {
+            text-align: center;
+            padding: 24px;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .tt-hero h1 {
+            font-size: 2rem;
+            color: #1f5da0;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            letter-spacing: -0.02em;
+        }
+
+        .bobby-intro {
+            max-width: 850px;
+            margin: 0 auto 2rem;
+            font-size: 1.25rem;
+            color: #222222;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            line-height: 1.8;
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+        }
+
+        .bobby-intro strong {
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Newsletter Featured Section */
+        .newsletter-featured {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            color: white;
+            padding: 24px;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-featured::before {
+            content: "📬";
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.1;
+            right: -2rem;
+            top: -2rem;
+            transform: rotate(-15deg);
+        }
+
+        .newsletter-featured h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            font-weight: bold;
+            color: #1f5da0;
+        }
+
+        .newsletter-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 500;
+            color: #222222;
+            font-family: "Roboto", sans-serif;
+            text-align: center;       
+        }
+
+        .newsletter-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+            max-width: 900px;
+            margin-left: auto;
+        }
+
+        .newsletter-benefit {
+            background: rgba(255,255,255,0.2);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            margin-right: auto;
+            color: #222222;
+            font-family: "Roboto", sans-serif;
+            text-align: center;  
+        }
+
+        .newsletter-benefit h4 {
+            font-size: 1.4rem;
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            color: black;
+            justify-content: center;
+        }
+
+        .newsletter-benefit p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .newsletter-cta-main {
+            display: inline-block;
+            background: #1f5da0;
+            color: white !important;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .newsletter-cta-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .newsletter-frequency {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            color: #222222;
+        }
+
+        /* Who We Help Section */
+        .who-we-help {
+            text-align: center;
+            margin: 6rem 0 3rem;
+        }
+
+        .who-we-help h2 {
+            font-size: 2.5rem;
+            color: #2d3436;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .help-categories {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .help-badge {
+            background: white;
+            border: #1f5da0 solid 1px;
+            color: #1f5da0;
+            padding: 1rem 2.5rem;
+            border-radius: 35px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            box-shadow: 0 3px 10px rgba(116, 185, 255, 0.3);
+            letter-spacing: 0.02em;
+        }
+
+        .help-badge.parent {
+            background: white;
+            box-shadow: 0 3px 10px rgba(162, 155, 254, 0.3);
+        }
+
+        /* Tools Section */
+        .tools-section {
+            margin-bottom: 3rem;
+        }
+
+        .tool-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-header {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .category-header h3 {
+            font-size: 2rem;
+            color: #1f5da0;
+            margin-bottom: 0.7rem;
+            font-weight: bold;
+        }
+
+        .category-header p {
+            color: #222222;
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .tool-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card:hover {
+            border-color: #74b9ff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tool-card.parent-tool:hover {
+            border-color: #a29bfe;
+        }
+
+        .tool-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-name {
+            font-size: 1.8rem;
+            color: #2d3436;
+            margin: 1rem 0rem;
+            font-weight: 800;
+        }
+
+        .tool-description {
+            color: #222222;
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .tool-features {
+            text-align: left;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px; 
+            min-height: 251px;
+        }
+
+        .tool-features h4 {
+            font-size: 1.2rem;
+            color: #2d3436;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
+        }
+
+        .tool-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tool-features li {
+            padding: 0.5rem 0;
+            color: #636e72;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        .tool-features li:before {
+            content: "✓ ";
+            color: #222222;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .tool-cta {
+            display: inline-block;
+            background: #1f5da0;
+            color: white !important;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .parent-tool .tool-cta {
+            background: #1f5da0;
+        }
+
+        .tool-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        /* Newsletter Reminder Section */
+        .newsletter-reminder {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .newsletter-reminder h3 {
+            font-size: 2.2rem;
+            color: #2d3436;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+        }
+
+        .newsletter-reminder p {
+            font-size: 1.25rem;
+            color: #222222;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .testimonial-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1.5rem auto;
+            max-width: 650px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            font-style: italic;
+            color: #636e72;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 600;
+            color: #2d3436;
+            margin-top: 0.5rem;
+        }
+
+        .newsletter-btn {
+            display: inline-block;
+            background: #1f5da0;
+            color: white !important;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: #1f5da0;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Bottom Message */
+        .bottom-message {
+            text-align: center;
+            padding: 2.5rem;
+            color: #22222;
+            font-style: italic;
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .tt-hero h1 {
+                font-size: 2rem;
+            }
+
+            .bobby-intro {
+                padding: 1.5rem;
+                font-size: 1rem;
+            }
+
+            .newsletter-benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-container {
+                grid-template-columns: 1fr;
+            }
+
+            .help-categories {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .help-badge {
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+    </style>
+<div class="training-ties-hub">
+<!-- Hero Section -->
+<div class="tt-hero">
+<h1>Welcome to Training Ties</h1>
+<div class="bobby-intro">
+<p><strong>From all of us at Training Ties – Thank You.</strong></p>
+<p>We know how hard you work every day. Whether you're managing a classroom of 25 or helping one child with homework, the job never really ends. You deserve support that actually makes a difference.</p>
+<p>That's why we've created these free AI tools. They're our way of giving back to the educators and parents who give so much. Built by teachers, for teachers and parents – because the best help comes from those who truly understand.</p>
+</div>
+</div>
+<!-- Newsletter Featured Section -->
+<div class="newsletter-featured">
+<h2>📬 The Next Step Newsletter</h2>
+<p class="newsletter-tagline">Your Weekly Dose of "You've Got This!"</p>
+<div class="newsletter-benefits">
+<div class="newsletter-benefit">
+<h4>🎯 Real Solutions</h4>
+<p>Practical tips that actually work in real classrooms and real homes. No theory, just what works.</p>
+</div>
+<div class="newsletter-benefit">
+<h4>⏰ 5-Minute Reads</h4>
+<p>Quick wins you can implement today. Because who has time for 20-page articles?</p>
+</div>
+<div class="newsletter-benefit">
+<h4>💡 Fresh Ideas Weekly</h4>
+<p>New activities, behavior strategies, and sanity-savers delivered every Friday morning.</p>
+</div>
+<div class="newsletter-benefit">
+<h4>🤝 Community Wisdom</h4>
+<p>Tips from other teachers and parents who get it. You're not alone in this!</p>
+</div>
+</div>
+<a href="https://training-ties.kit.com/9970039cb5" class="newsletter-cta-main" target="_blank"> Join 2,000+ Educators &amp; Parents </a>
+<p class="newsletter-frequency">Free forever • Unsubscribe anytime • No spam, just help</p>
+</div>
+<!-- Who We Help -->
+<div class="who-we-help">
+<h2>Free AI Tools That Actually Help</h2>
+<p style="font-size: 1.1rem; color: #636e72; margin-bottom: 2rem;">Simple, friendly assistance for real people doing important work</p>
+<div class="help-categories">
+<div class="help-badge">Teachers &amp; Educators</div>
+<div class="help-badge parent">Parents &amp; Caregivers</div>
+</div>
+</div>
+<!-- Tools Section -->
+<div class="tools-section">
+<!-- For Teachers -->
+<div class="tool-category">
+<div class="category-header">
+<h3>🍎 For Teachers &amp; Educators</h3>
+<p>Because you deserve support in and out of the classroom</p>
+</div>
+<div class="tools-container">
+<!-- Master Teacher GPT -->
+<div class="tool-card">
+<div class="tool-emoji">🎓</div>
+<h4 class="tool-name">Master Teacher GPT</h4>
+<p class="tool-description">Your personal teaching assistant that understands Massachusetts curriculum. Like having a mentor teacher available 24/7.</p>
+<div class="tool-features">
+<h4>This tool helps you:</h4>
+<ul>
+<li>Create lesson plans in minutes, not hours</li>
+<li>Write parent emails that get your point across kindly</li>
+<li>Make quizzes that actually test what you taught</li>
+<li>Get IEP goal suggestions that make sense</li>
+</ul>
+</div>
+<a href="https://chatgpt.com/g/g-68805af9f0608191b5a19ac5874ffedc-master-teacher-gpt" class="tool-cta" target="_blank"> Try Master Teacher → </a>
+</div>
+<!-- PlanBee -->
+<div class="tool-card">
+<div class="tool-emoji">🐝</div>
+<h4 class="tool-name">PlanBee</h4>
+<p class="tool-description">Specifically for elementary teachers who need creative, age-appropriate ideas that actually work with little ones.</p>
+<div class="tool-features">
+<h4>Perfect for when you need:</h4>
+<ul>
+<li>Fun activities that teach real concepts</li>
+<li>Classroom management tips that work</li>
+<li>Ideas for different learning styles</li>
+<li>Quick wins for busy mornings</li>
+</ul>
+</div>
+<a href="https://chatgpt.com/g/g-681ee12472e08191a4ee9b9d6830ff82-planbee-ai-assistant-for-elementary-teachers" class="tool-cta" target="_blank"> Explore PlanBee → </a>
+</div>
+</div>
+</div>
+<!-- For Parents -->
+<div class="tool-category">
+<div class="category-header">
+<h3>👨👩👧👦 For Parents &amp; Caregivers</h3>
+<p>Because parenting is hard, and you don't have to figure it out alone</p>
+</div>
+<div class="tools-container">
+<!-- The Village -->
+<div class="tool-card parent-tool">
+<div class="tool-emoji">🏘️</div>
+<h4 class="tool-name">The Village</h4>
+<p class="tool-description">Like having experienced parents on speed dial. Get real answers to real parenting challenges, judgment-free.</p>
+<div class="tool-features">
+<h4>Get help with:</h4>
+<ul>
+<li>Getting your toddler to actually eat vegetables</li>
+<li>Bedtime routines that don't take 3 hours</li>
+<li>Understanding if behaviors are "just a phase"</li>
+<li>Finding patience when you're running on empty</li>
+</ul>
+</div>
+<a href="https://chatgpt.com/g/g-681a6c3c57688191a3f42834505187b4-the-village-ai-for-real-life-parenting" class="tool-cta" target="_blank"> Visit The Village → </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Newsletter Reminder Section -->
+<div class="newsletter-reminder">
+<h3>Don't Go It Alone!</h3>
+<p>The Next Step Newsletter is like having a supportive colleague who always has great ideas.</p>
+<div class="testimonial-box">
+<p>"This newsletter is the only one I actually read every week. It's like Bobby knows exactly what I'm struggling with!"</p>
+<p class="testimonial-author">– Sarah M., 3rd Grade Teacher</p>
+</div>
+<a href="https://training-ties.kit.com/9970039cb5" class="newsletter-btn" target="_blank"> Get Your First Newsletter → </a>
+</div>
+<!-- Bottom Message -->
+<div class="bottom-message">
+<p>Everything here is completely free because I believe good help should be accessible to everyone. No tech skills needed – if you can send a text message, you can use these tools. And if you ever get stuck, just email me. I actually respond!</p>
+<p style="margin-top: 1rem;"><strong>– Bobby Morong, Founder of Training Ties</strong></p>
+</div>
+</div>
