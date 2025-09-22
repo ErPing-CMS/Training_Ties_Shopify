@@ -61,16 +61,20 @@
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
-      {%- if product.selected_or_first_available_variant.featured_media != null -%}
-        {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+            {%- comment -%}
+        Always show the first product image (ad image) first, regardless of variant selection
+        This ensures the ad image appears first on product pages but variant images show in checkout
+      {%- endcomment -%}
+      {%- if product.media.first != null -%}
+        {%- assign first_media = product.media.first -%}
         <li
-          id="Slide-{{ section.id }}-{{ featured_media.id }}"
-          class="product__media-item grid__item slider__slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-          data-media-id="{{ section.id }}-{{ featured_media.id }}"
+          id="Slide-{{ section.id }}-{{ first_media.id }}"
+          class="product__media-item grid__item slider__slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if first_media.media_type != 'image' %} product__media-item--full{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          data-media-id="{{ section.id }}-{{ first_media.id }}"
         >
           {%- assign media_position = 1 -%}
           {% render 'product-thumbnail',
-            media: featured_media,
+            media: first_media,
             media_count: media_count,
             position: media_position,
             desktop_layout: section.settings.gallery_layout,
